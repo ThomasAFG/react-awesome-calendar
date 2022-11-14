@@ -1,8 +1,8 @@
 {
-  "name": "react-awesome-calendar",
-  "version": "1.0.14",
+  "name": "@thomasafg/react-awesome-calendar",
+  "version": "1.1.5",
   "license": "MIT",
-  "author": "Michael Hamilton",
+  "author": "Michael Hamilton - Thomas Gouvêa",
   "description": "An easy to use React Calendar component",
   "keywords": [
     "calendar",
@@ -22,6 +22,9 @@
     "test": "jest",
     "publishPackage": "npm run build && npm publish"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "browserslist": [
     ">0.2%",
     "not dead",
@@ -40,9 +43,9 @@
   "devDependencies": {
     "@babel/core": "^7.11.4",
     "@babel/node": "^7.10.5",
+    "@babel/plugin-transform-typeof-symbol": "^7.10.4",
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
-    "@babel/plugin-transform-typeof-symbol": "^7.10.4",
     "@babel/register": "^7.10.5",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^26.3.0",
@@ -101,5 +104,12 @@
     "moduleNameMapper": {
       "^.+\\.(css|less|scss)$": "babel-jest"
     }
+  },
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThomasAFG/react-awesome-calendar.git"
   }
 }

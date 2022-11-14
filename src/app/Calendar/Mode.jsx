@@ -13,17 +13,17 @@ export default class Mode extends React.PureComponent {
       {
         id: year,
         mode: yearlyMode,
-        text: 'Year',
+        text: 'Ano',
       },
       {
         id: month,
         mode: monthlyMode,
-        text: 'Month',
+        text: 'Mês',
       },
       {
         id: day,
         mode: dailyMode,
-        text: 'Day',
+        text: 'Dia',
       },
     ];
     if (Array.isArray(modes) && modes.length) {

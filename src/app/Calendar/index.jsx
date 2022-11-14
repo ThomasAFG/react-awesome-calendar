@@ -10,10 +10,6 @@ import Mode from './Mode';
 import { formatEvents } from './util/calendar';
 import { calendarDetails } from './util/calendarDetails';
 
-//TODO: Upcoming features:
-//set beginning day of the week
-//be able to export Yearly, Monthly and Daily
-
 const modes = {
   day: dailyMode,
   month: monthlyMode,

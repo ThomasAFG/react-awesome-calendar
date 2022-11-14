@@ -43,7 +43,6 @@ export default class Monthly extends React.Component {
               year: this.props.year,
             }}
             onClickDay={this.onClickDay}
-            // onClickEvent={this.props.onClickEvent}
             onClickPrev={this.onClickPrev}
             onClickNext={this.onClickNext}
           />

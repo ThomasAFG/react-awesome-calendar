@@ -4,21 +4,6 @@ import { getDate } from './date';
 let firstDayOfWeek = 0;
 let lastDayOfWeek = 6;
 
-// export const dateDiff = (start, end) => {
-//   const from = new Date(start.getFullYear(), start.getMonth(), start.getDate());
-//   const to = new Date(end.getFullYear(), end.getMonth(), end.getDate());
-//
-//   const timeDiff = Math.abs(from.getTime() - to.getTime());
-//   const dayDiff = timeDiff / (1000 * 3600 * 24);
-//   let value =  dayDiff + 1;
-//   const toDate = getDate(end);
-//   const toDateAsTime = toDate.getTime();
-//   if (end.getTime() === toDateAsTime) {
-//     value -= 1;
-//   }
-//   return value;
-// };
-
 export const dateDiff = (start, end) => {
   const from = new Date(start.getFullYear(), start.getMonth(), start.getDate());
   const to = new Date(end.getFullYear(), end.getMonth(), end.getDate());
@@ -92,7 +77,6 @@ export const formatEvents = events => {
       const toDate = getDate(to);
       const fromDateAsTime = fromDate.getTime();
       const toDateAsTime = toDate.getTime();
-      // if the from date is the same as the to date
 
       if (fromDateAsTime === toDateAsTime) {
         if (!Array.isArray(formattedEvents[fromDateAsTime])) {
@@ -125,12 +109,10 @@ export const formatEvents = events => {
             });
           }
         } else {
-          // loop over each day between the from - to date
           for (let x = 0; x < daySpan; x++) {
             const dateIteration = new Date(fromDateAsTime);
             dateIteration.setDate(fromDate.getDate() + x);
 
-            // work out whether the event is positioned first, middle or last
             let position;
             if (x === 0) {
               position = startPosition;
@@ -155,7 +137,6 @@ export const formatEvents = events => {
         }
       }
     });
-    // sort each event by date time
     Object.keys(formattedEvents).forEach(date => {
       formattedEvents[date] = formattedEvents[date].sort(
         (a, b) => new Date(a.from) - new Date(b.from),
